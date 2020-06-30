@@ -2,14 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { User } from './User/User';
-import { CommentsList } from './Comments-list/Commets-list';
+import { CommentsList } from './Comments/Comments';
+import { commentShape } from '../../../Shape/Shape';
 
 import './Post.css';
 
 export const Post = ({ post }) => (
   <>
     <div className="post">
-      <div className="post__user">
+      <div className="post__user user">
         <User userData={post.user} />
       </div>
       <div className="post__info">
@@ -35,13 +36,6 @@ Post.propTypes = {
       username: PropTypes.string.isRequired,
       email: PropTypes.string.isRequired,
     }).isRequired,
-    comments: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        email: PropTypes.string.isRequired,
-        body: PropTypes.string.isRequired,
-        id: PropTypes.number.isRequired,
-      }).isRequired,
-    ).isRequired,
+    comments: PropTypes.arrayOf(commentShape.isRequired).isRequired,
   }).isRequired,
 };

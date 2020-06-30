@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { UserAddress } from './User-address/User-address';
+import { UserAddress } from './UserAddress/UserAddress';
 import './User.css';
+import { userAddress } from '../../../../Shape/Shape';
 
 export const User = ({ userData }) => (
   <>
-    <h4 className="user-username">{userData.username}</h4>
-    <p className="user-name">{userData.name}</p>
+    <h4 className="user__username">{userData.username}</h4>
+    <p className="user__name">{userData.name}</p>
     <UserAddress address={userData.address} />
   </>
 );
@@ -16,11 +17,6 @@ User.propTypes = {
     name: PropTypes.string.isRequired,
     username: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
-    address: PropTypes.shape({
-      street: PropTypes.string.isRequired,
-      suite: PropTypes.string.isRequired,
-      city: PropTypes.string.isRequired,
-      zipcode: PropTypes.string.isRequired,
-    }),
+    address: userAddress.isRequired,
   }).isRequired,
 };

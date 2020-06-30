@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+import { commentShape } from '../../Shape/Shape';
 import { Post } from './Post/Post';
-import './Post-list.css';
+import './PostList.css';
 
 export const PostsList = ({ posts }) => (
   <ul className="posts-list">
@@ -14,11 +16,5 @@ export const PostsList = ({ posts }) => (
 );
 
 PostsList.propTypes = {
-  posts: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string,
-      body: PropTypes.string,
-      id: PropTypes.number,
-    }).isRequired,
-  ).isRequired,
+  posts: PropTypes.arrayOf(commentShape.isRequired).isRequired,
 };
