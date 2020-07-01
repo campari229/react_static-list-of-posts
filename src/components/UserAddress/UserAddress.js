@@ -1,7 +1,7 @@
 import React from 'react';
 import './UserAddress.css';
 
-import { userAddress } from '../../../../../Shape/Shape';
+import { userAddress } from '../Shape/Shape';
 
 export const UserAddress = ({ address }) => (
   <div className="user__address">

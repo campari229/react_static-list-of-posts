@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { User } from './User/User';
-import { CommentsList } from './Comments/Comments';
-import { commentShape } from '../../../Shape/Shape';
+import { User } from '../User/User';
+import { CommentsList } from '../CommentsList/CommentsList';
+import { commentShape } from '../Shape/Shape';
 
 import './Post.css';
 

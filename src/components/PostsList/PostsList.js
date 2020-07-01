@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { commentShape } from '../../Shape/Shape';
-import { Post } from './Post/Post';
+import { commentShape } from '../Shape/Shape';
+import { Post } from '../Post/Post';
 import './PostList.css';
 
 export const PostsList = ({ posts }) => (

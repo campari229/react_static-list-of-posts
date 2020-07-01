@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Comment } from './Comment/Comment';
-import { commentShape } from '../../../../Shape/Shape';
+import { Comment } from '../Comment/Comment';
+import { commentShape } from '../Shape/Shape';
 
-import './Comments.css';
+import './CommentsList.css';
 
 export const CommentsList = ({ comments }) => (
   <ul className="comments-list">

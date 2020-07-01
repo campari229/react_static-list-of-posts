@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { UserAddress } from './UserAddress/UserAddress';
+import { UserAddress } from '../UserAddress/UserAddress';
 import './User.css';
-import { userAddress } from '../../../../Shape/Shape';
+import { userAddress } from '../Shape/Shape';
 
 export const User = ({ userData }) => (
   <>

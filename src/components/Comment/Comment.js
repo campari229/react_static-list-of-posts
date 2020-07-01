@@ -1,6 +1,6 @@
 import React from 'react';
 import './Comment.css';
-import { commentShape } from '../../../../../Shape/Shape';
+import { commentShape } from '../Shape/Shape';
 
 export const Comment = ({ comment }) => (
   <>
